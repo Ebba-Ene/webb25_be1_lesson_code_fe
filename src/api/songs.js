@@ -2,7 +2,6 @@ import { apiFetch } from "./client"
 
     export async function getSongs(){
         try {
-
             const songs = await apiFetch('/api/songs/')
             return songs
         } catch(error) {
@@ -11,10 +10,8 @@ import { apiFetch } from "./client"
         }
     }
 
-
     export async function getSong(id){
         try {
-
             const song = await apiFetch(`/api/songs/${id}`)
             return song
         } catch(error) {
@@ -25,7 +22,6 @@ import { apiFetch } from "./client"
 
     export async function createSong(songData) {
         try {
-
             const song = await apiFetch(`/api/songs/`, {
                 method: "POST"
             }, songData)
